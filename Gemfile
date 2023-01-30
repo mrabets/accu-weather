@@ -7,6 +7,9 @@ gem 'rack-cors'
 gem 'faraday'
 gem 'pry'
 gem 'rubocop-rails', require: false
+gem 'redis'
+gem 'hiredis'
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.7', '>= 6.1.7.2'
