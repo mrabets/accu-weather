@@ -1,4 +1,9 @@
-class ApiClient
+class Weather::ApiClient
+  attr_reader :api_token
+  def initialize(api_token = nil)
+    api_token = oauth_token
+  end
+
   def connection
     @connection ||= Faraday.new(
       url: api_host,
@@ -16,9 +21,24 @@ class ApiClient
       request.url(endpoint)
     end
 
-    JSON.parse(response.body)
+    process_response(response)
   rescue Faraday::Error => exception
     "Faraday exception was raised => #{exception}"
+  end
+
+  def process_response(response)
+    case response.status
+    when 200..299
+      JSON.parse(response.body)
+    else
+      handle_api_error(response)
+    end
+  end
+
+  def handle_api_error(response)
+    result = JSON.parse(response.body)
+
+    raise "Error: #{result.fetch("Code")}. #{result.fetch("Message")}}"
   end
 
   def setup_connection(faraday)

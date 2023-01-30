@@ -1,0 +1,13 @@
+
+[1mFrom:[0m /home/kmarabet/weather/app/services/api_client.rb:25 ApiClient#process_response:
+
+    [1;34m24[0m: [32mdef[0m [1;34mprocess_response[0m(response)
+ => [1;34m25[0m:   binding.pry 
+    [1;34m26[0m:   [32mcase[0m response.status
+    [1;34m27[0m:   [32mwhen[0m [1;34m200[0m..[1;34m299[0m
+    [1;34m28[0m:     [1;34;4mJSON[0m.parse(response.body)
+    [1;34m29[0m:   [32melse[0m
+    [1;34m30[0m:     raise [31m[1;31m"[0m[31mError: #{response.body.fetch([1;31m"[0m[31mCode[1;31m"[0m[31m[0m[31m)}[0m[31m. #{response.body.fetch([1;31m"[0m[31mMessage[1;31m"[0m[31m[0m[31m)}[0m[31m}[1;31m"[0m[31m[0m
+    [1;34m31[0m:   [32mend[0m
+    [1;34m32[0m: [32mend[0m
+

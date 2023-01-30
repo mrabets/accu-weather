@@ -1,0 +1,8 @@
+
+[1mFrom:[0m /home/kmarabet/weather/app/services/weather_service.rb:29 WeatherService#temperature_by_time:
+
+    [1;34m28[0m: [32mdef[0m [1;34mtemperature_by_time[0m(timestamp)
+ => [1;34m29[0m:   binding.pry
+    [1;34m30[0m:   last_day_temperature_list
+    [1;34m31[0m: [32mend[0m
+
