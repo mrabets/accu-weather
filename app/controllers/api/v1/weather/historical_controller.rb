@@ -5,7 +5,7 @@ module Api
     module Weather
       class HistoricalController < ApplicationController
         def index
-          render json: day_conditions
+          render json: day_conditions.as_json
         end
 
         def max

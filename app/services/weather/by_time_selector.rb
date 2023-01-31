@@ -2,25 +2,26 @@
 
 module Weather
   class ByTimeSelector
-    def initialize(conditions:, select_timestamp:)
-      @conditions = conditions
+    def initialize(select_timestamp)
       @select_timestamp = select_timestamp.to_f
     end
 
     def call
+      return matched_condition if matched_condition.present?
+
       nearest_timestamp_condition
     end
 
     private
 
-    attr_reader :conditions, :select_timestamp
+    attr_reader :select_timestamp
 
     def nearest_timestamp_condition
-      sorted_by_timestamp_conditions.detect { |condition| condition[:timestamp] >= select_timestamp }
+      WeatherCondition.where('timestamp >= ?', select_timestamp).order('timestamp ASC').limit(1)
     end
 
-    def sorted_by_timestamp_conditions
-      conditions.sort_by { |condition| condition[:timestamp] }
+    def matched_condition
+      @matched_condition ||= WeatherCondition.find_by(timestamp: select_timestamp)
     end
   end
 end

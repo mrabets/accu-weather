@@ -12,13 +12,13 @@ module AccuWeatherApi
     end
 
     def current_conditions
-      Rails.cache.fetch('current_condition', :expires => 30.minutes) do
+      Rails.cache.fetch('current_condition', expires: 30.minutes) do
         get("currentconditions/v1/#{location_key}")
       end
     end
 
     def historical_conditions
-      Rails.cache.fetch('historical24_condition', :expires => 30.minutes) do
+      Rails.cache.fetch('historical24_condition', expires: 30.minutes) do
         get("currentconditions/v1/#{location_key}/historical/24")
       end
     end
