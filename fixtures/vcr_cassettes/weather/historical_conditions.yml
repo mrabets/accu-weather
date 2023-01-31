@@ -1,0 +1,86 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://dataservice.accuweather.com/currentconditions/v1/352559_PC/historical/24?apikey=<ACCUWEATHER_API_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v1.10.2
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Mon, 30 Jan 2023 13:38:51 GMT
+      content-type:
+      - application/json
+      content-length:
+      - '12152'
+      connection:
+      - keep-alive
+      server:
+      - Microsoft-IIS/10.0
+      ratelimit-limit:
+      - '50'
+      ratelimit-remaining:
+      - '11'
+      access-control-allow-origin:
+      - "*"
+      access-control-allow-methods:
+      - GET, PUT, POST, DELETE
+      access-control-allow-headers:
+      - origin, x-requested-with, accept
+      access-control-max-age:
+      - '3628800'
+      vary:
+      - Accept-Encoding
+      cache-control:
+      - public, max-age=585
+      expires:
+      - Mon, 30 Jan 2023 13:48:36 GMT
+      akamai-grn:
+      - 0.34e92d17.1675085931.39a643e4
+      accept:
+      - "*/*"
+      accept-encoding:
+      - gzip;q=1.0, deflate;q=0.6, identity;q=0.3
+      host:
+      - api.accuweather.com
+      user-agent:
+      - Faraday v1.10.2
+      x-forwarded-for:
+      - 85.193.215.28
+      x-forwarded-port:
+      - '80'
+      x-forwarded-proto:
+      - http
+    body:
+      encoding: UTF-8
+      string: '[{"LocalObservationDateTime":"2023-01-30T13:57:00+01:00","EpochTime":1675083420,"WeatherText":"Light
+        snow","WeatherIcon":19,"HasPrecipitation":true,"PrecipitationType":"Snow","IsDayTime":true,"Temperature":{"Metric":{"Value":-0.5,"Unit":"C","UnitType":17},"Imperial":{"Value":31.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/pl/bialystok/15-111/current-weather/352559_pc?lang=en-us","Link":"http://www.accuweather.com/en/pl/bialystok/15-111/current-weather/352559_pc?lang=en-us"},{"LocalObservationDateTime":"2023-01-30T12:58:00+01:00","EpochTime":1675079880,"WeatherText":"Light
+        snow","WeatherIcon":19,"HasPrecipitation":true,"PrecipitationType":"Snow","IsDayTime":true,"Temperature":{"Metric":{"Value":-0.5,"Unit":"C","UnitType":17},"Imperial":{"Value":31.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/pl/bialystok/15-111/current-weather/352559_pc?lang=en-us","Link":"http://www.accuweather.com/en/pl/bialystok/15-111/current-weather/352559_pc?lang=en-us"},{"LocalObservationDateTime":"2023-01-30T11:57:00+01:00","EpochTime":1675076220,"WeatherText":"Light
+        snow","WeatherIcon":19,"HasPrecipitation":true,"PrecipitationType":"Snow","IsDayTime":true,"Temperature":{"Metric":{"Value":-0.4,"Unit":"C","UnitType":17},"Imperial":{"Value":31.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/pl/bialystok/15-111/current-weather/352559_pc?lang=en-us","Link":"http://www.accuweather.com/en/pl/bialystok/15-111/current-weather/352559_pc?lang=en-us"},{"LocalObservationDateTime":"2023-01-30T10:58:00+01:00","EpochTime":1675072680,"WeatherText":"Light
+        snow","WeatherIcon":19,"HasPrecipitation":true,"PrecipitationType":"Snow","IsDayTime":true,"Temperature":{"Metric":{"Value":-0.2,"Unit":"C","UnitType":17},"Imperial":{"Value":32.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/pl/bialystok/15-111/current-weather/352559_pc?lang=en-us","Link":"http://www.accuweather.com/en/pl/bialystok/15-111/current-weather/352559_pc?lang=en-us"},{"LocalObservationDateTime":"2023-01-30T09:58:00+01:00","EpochTime":1675069080,"WeatherText":"Light
+        snow","WeatherIcon":19,"HasPrecipitation":true,"PrecipitationType":"Snow","IsDayTime":true,"Temperature":{"Metric":{"Value":0.0,"Unit":"C","UnitType":17},"Imperial":{"Value":32.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/pl/bialystok/15-111/current-weather/352559_pc?lang=en-us","Link":"http://www.accuweather.com/en/pl/bialystok/15-111/current-weather/352559_pc?lang=en-us"},{"LocalObservationDateTime":"2023-01-30T08:57:00+01:00","EpochTime":1675065420,"WeatherText":"Cloudy","WeatherIcon":7,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":true,"Temperature":{"Metric":{"Value":0.1,"Unit":"C","UnitType":17},"Imperial":{"Value":32.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/pl/bialystok/15-111/current-weather/352559_pc?lang=en-us","Link":"http://www.accuweather.com/en/pl/bialystok/15-111/current-weather/352559_pc?lang=en-us"},{"LocalObservationDateTime":"2023-01-30T08:03:00+01:00","EpochTime":1675062180,"WeatherText":"Cloudy","WeatherIcon":7,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":true,"Temperature":{"Metric":{"Value":-0.1,"Unit":"C","UnitType":17},"Imperial":{"Value":32.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/pl/bialystok/15-111/current-weather/352559_pc?lang=en-us","Link":"http://www.accuweather.com/en/pl/bialystok/15-111/current-weather/352559_pc?lang=en-us"},{"LocalObservationDateTime":"2023-01-30T06:57:00+01:00","EpochTime":1675058220,"WeatherText":"Mostly
+        cloudy","WeatherIcon":38,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":false,"Temperature":{"Metric":{"Value":0.2,"Unit":"C","UnitType":17},"Imperial":{"Value":32.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/pl/bialystok/15-111/current-weather/352559_pc?lang=en-us","Link":"http://www.accuweather.com/en/pl/bialystok/15-111/current-weather/352559_pc?lang=en-us"},{"LocalObservationDateTime":"2023-01-30T05:57:00+01:00","EpochTime":1675054620,"WeatherText":"Light
+        snow","WeatherIcon":19,"HasPrecipitation":true,"PrecipitationType":"Snow","IsDayTime":false,"Temperature":{"Metric":{"Value":0.1,"Unit":"C","UnitType":17},"Imperial":{"Value":32.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/pl/bialystok/15-111/current-weather/352559_pc?lang=en-us","Link":"http://www.accuweather.com/en/pl/bialystok/15-111/current-weather/352559_pc?lang=en-us"},{"LocalObservationDateTime":"2023-01-30T04:57:00+01:00","EpochTime":1675051020,"WeatherText":"Mostly
+        cloudy","WeatherIcon":38,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":false,"Temperature":{"Metric":{"Value":-0.1,"Unit":"C","UnitType":17},"Imperial":{"Value":32.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/pl/bialystok/15-111/current-weather/352559_pc?lang=en-us","Link":"http://www.accuweather.com/en/pl/bialystok/15-111/current-weather/352559_pc?lang=en-us"},{"LocalObservationDateTime":"2023-01-30T03:57:00+01:00","EpochTime":1675047420,"WeatherText":"Cloudy","WeatherIcon":7,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":false,"Temperature":{"Metric":{"Value":-0.4,"Unit":"C","UnitType":17},"Imperial":{"Value":31.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/pl/bialystok/15-111/current-weather/352559_pc?lang=en-us","Link":"http://www.accuweather.com/en/pl/bialystok/15-111/current-weather/352559_pc?lang=en-us"},{"LocalObservationDateTime":"2023-01-30T02:57:00+01:00","EpochTime":1675043820,"WeatherText":"Mostly
+        cloudy","WeatherIcon":38,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":false,"Temperature":{"Metric":{"Value":-0.5,"Unit":"C","UnitType":17},"Imperial":{"Value":31.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/pl/bialystok/15-111/current-weather/352559_pc?lang=en-us","Link":"http://www.accuweather.com/en/pl/bialystok/15-111/current-weather/352559_pc?lang=en-us"},{"LocalObservationDateTime":"2023-01-30T01:58:00+01:00","EpochTime":1675040280,"WeatherText":"Mostly
+        cloudy","WeatherIcon":38,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":false,"Temperature":{"Metric":{"Value":-0.5,"Unit":"C","UnitType":17},"Imperial":{"Value":31.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/pl/bialystok/15-111/current-weather/352559_pc?lang=en-us","Link":"http://www.accuweather.com/en/pl/bialystok/15-111/current-weather/352559_pc?lang=en-us"},{"LocalObservationDateTime":"2023-01-30T00:57:00+01:00","EpochTime":1675036620,"WeatherText":"Mostly
+        cloudy","WeatherIcon":38,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":false,"Temperature":{"Metric":{"Value":-0.6,"Unit":"C","UnitType":17},"Imperial":{"Value":31.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/pl/bialystok/15-111/current-weather/352559_pc?lang=en-us","Link":"http://www.accuweather.com/en/pl/bialystok/15-111/current-weather/352559_pc?lang=en-us"},{"LocalObservationDateTime":"2023-01-29T23:58:00+01:00","EpochTime":1675033080,"WeatherText":"Partly
+        cloudy","WeatherIcon":35,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":false,"Temperature":{"Metric":{"Value":-0.5,"Unit":"C","UnitType":17},"Imperial":{"Value":31.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/pl/bialystok/15-111/current-weather/352559_pc?lang=en-us","Link":"http://www.accuweather.com/en/pl/bialystok/15-111/current-weather/352559_pc?lang=en-us"},{"LocalObservationDateTime":"2023-01-29T22:58:00+01:00","EpochTime":1675029480,"WeatherText":"Mostly
+        cloudy","WeatherIcon":38,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":false,"Temperature":{"Metric":{"Value":-0.5,"Unit":"C","UnitType":17},"Imperial":{"Value":31.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/pl/bialystok/15-111/current-weather/352559_pc?lang=en-us","Link":"http://www.accuweather.com/en/pl/bialystok/15-111/current-weather/352559_pc?lang=en-us"},{"LocalObservationDateTime":"2023-01-29T21:58:00+01:00","EpochTime":1675025880,"WeatherText":"Partly
+        cloudy","WeatherIcon":35,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":false,"Temperature":{"Metric":{"Value":-0.6,"Unit":"C","UnitType":17},"Imperial":{"Value":31.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/pl/bialystok/15-111/current-weather/352559_pc?lang=en-us","Link":"http://www.accuweather.com/en/pl/bialystok/15-111/current-weather/352559_pc?lang=en-us"},{"LocalObservationDateTime":"2023-01-29T20:58:00+01:00","EpochTime":1675022280,"WeatherText":"Partly
+        cloudy","WeatherIcon":35,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":false,"Temperature":{"Metric":{"Value":-0.7,"Unit":"C","UnitType":17},"Imperial":{"Value":31.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/pl/bialystok/15-111/current-weather/352559_pc?lang=en-us","Link":"http://www.accuweather.com/en/pl/bialystok/15-111/current-weather/352559_pc?lang=en-us"},{"LocalObservationDateTime":"2023-01-29T19:57:00+01:00","EpochTime":1675018620,"WeatherText":"Partly
+        cloudy","WeatherIcon":35,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":false,"Temperature":{"Metric":{"Value":-0.8,"Unit":"C","UnitType":17},"Imperial":{"Value":31.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/pl/bialystok/15-111/current-weather/352559_pc?lang=en-us","Link":"http://www.accuweather.com/en/pl/bialystok/15-111/current-weather/352559_pc?lang=en-us"},{"LocalObservationDateTime":"2023-01-29T18:58:00+01:00","EpochTime":1675015080,"WeatherText":"Mostly
+        cloudy","WeatherIcon":38,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":false,"Temperature":{"Metric":{"Value":-0.9,"Unit":"C","UnitType":17},"Imperial":{"Value":30.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/pl/bialystok/15-111/current-weather/352559_pc?lang=en-us","Link":"http://www.accuweather.com/en/pl/bialystok/15-111/current-weather/352559_pc?lang=en-us"},{"LocalObservationDateTime":"2023-01-29T17:57:00+01:00","EpochTime":1675011420,"WeatherText":"Partly
+        cloudy","WeatherIcon":35,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":false,"Temperature":{"Metric":{"Value":-1.1,"Unit":"C","UnitType":17},"Imperial":{"Value":30.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/pl/bialystok/15-111/current-weather/352559_pc?lang=en-us","Link":"http://www.accuweather.com/en/pl/bialystok/15-111/current-weather/352559_pc?lang=en-us"},{"LocalObservationDateTime":"2023-01-29T16:57:00+01:00","EpochTime":1675007820,"WeatherText":"Partly
+        cloudy","WeatherIcon":35,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":false,"Temperature":{"Metric":{"Value":-1.0,"Unit":"C","UnitType":17},"Imperial":{"Value":30.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/pl/bialystok/15-111/current-weather/352559_pc?lang=en-us","Link":"http://www.accuweather.com/en/pl/bialystok/15-111/current-weather/352559_pc?lang=en-us"},{"LocalObservationDateTime":"2023-01-29T15:57:00+01:00","EpochTime":1675004220,"WeatherText":"Cloudy","WeatherIcon":7,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":true,"Temperature":{"Metric":{"Value":-0.9,"Unit":"C","UnitType":17},"Imperial":{"Value":30.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/pl/bialystok/15-111/current-weather/352559_pc?lang=en-us","Link":"http://www.accuweather.com/en/pl/bialystok/15-111/current-weather/352559_pc?lang=en-us"},{"LocalObservationDateTime":"2023-01-29T14:58:00+01:00","EpochTime":1675000680,"WeatherText":"Cloudy","WeatherIcon":7,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":true,"Temperature":{"Metric":{"Value":-1.1,"Unit":"C","UnitType":17},"Imperial":{"Value":30.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/pl/bialystok/15-111/current-weather/352559_pc?lang=en-us","Link":"http://www.accuweather.com/en/pl/bialystok/15-111/current-weather/352559_pc?lang=en-us"}]'
+  recorded_at: Mon, 30 Jan 2023 13:38:51 GMT
+recorded_with: VCR 6.1.0
