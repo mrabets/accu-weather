@@ -2,17 +2,14 @@
 
 class Api::V1::WeatherController < ApplicationController
   def current
-    render json: AccuWeatherApi::Wrapper.current_conditions
+    render json: AccuWeatherApi::Wrapper.current_conditions.as_json
   end
 
   def by_time
-    nearest_condition = Weather::ByTimeSelector.new(
-      conditions: AccuWeatherApi::Wrapper.day_conditions,
-      select_timestamp: params[:timestamp]
-    ).call
+    condition = Weather::ByTimeSelector.new(params[:timestamp]).call
 
-    if nearest_condition.present?
-      render json: nearest_condition
+    if condition.present?
+      render json: condition
     else
       render status: :not_found
     end
