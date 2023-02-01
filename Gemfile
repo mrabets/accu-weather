@@ -9,7 +9,7 @@ gem 'pry'
 gem 'rubocop-rails', require: false
 gem 'redis'
 gem 'hiredis'
-
+gem 'rufus-scheduler'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.7', '>= 6.1.7.2'
@@ -38,6 +38,9 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'dotenv-rails'
   gem 'rspec-rails', '~> 6.0.0'
+  gem 'factory_bot_rails'
+  gem "vcr"
+  gem "webmock"
 end
 
 group :development do

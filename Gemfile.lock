@@ -60,6 +60,8 @@ GEM
       minitest (>= 5.1)
       tzinfo (~> 2.0)
       zeitwerk (~> 2.3)
+    addressable (2.8.1)
+      public_suffix (>= 2.0.2, < 6.0)
     ast (2.4.2)
     bootsnap (1.16.0)
       msgpack (~> 1.2)
@@ -68,6 +70,8 @@ GEM
     coderay (1.1.3)
     concurrent-ruby (1.2.0)
     connection_pool (2.3.0)
+    crack (0.4.5)
+      rexml
     crass (1.0.6)
     date (3.3.3)
     diff-lcs (1.5.0)
@@ -76,6 +80,13 @@ GEM
       dotenv (= 2.8.1)
       railties (>= 3.2)
     erubi (1.12.0)
+    et-orbi (1.2.7)
+      tzinfo
+    factory_bot (6.2.1)
+      activesupport (>= 5.0.0)
+    factory_bot_rails (6.2.0)
+      factory_bot (~> 6.2.0)
+      railties (>= 5.0.0)
     faraday (1.10.2)
       faraday-em_http (~> 1.0)
       faraday-em_synchrony (~> 1.0)
@@ -100,8 +111,12 @@ GEM
     faraday-rack (1.0.0)
     faraday-retry (1.0.3)
     ffi (1.15.5)
+    fugit (1.8.1)
+      et-orbi (~> 1, >= 1.2.7)
+      raabro (~> 1.4)
     globalid (1.1.0)
       activesupport (>= 5.0)
+    hashdiff (1.0.1)
     hiredis (0.6.3)
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
@@ -142,8 +157,10 @@ GEM
     pry (0.13.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
+    public_suffix (5.0.1)
     puma (5.6.5)
       nio4r (~> 2.0)
+    raabro (1.4.0)
     racc (1.6.2)
     rack (2.2.6.2)
     rack-cors (1.1.1)
@@ -222,6 +239,8 @@ GEM
       rubocop (>= 1.33.0, < 2.0)
     ruby-progressbar (1.11.0)
     ruby2_keywords (0.0.5)
+    rufus-scheduler (3.8.2)
+      fugit (~> 1.1, >= 1.1.6)
     spring (4.1.1)
     sprockets (4.2.0)
       concurrent-ruby (~> 1.0)
@@ -235,6 +254,11 @@ GEM
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.4.2)
+    vcr (6.1.0)
+    webmock (3.18.1)
+      addressable (>= 2.8.0)
+      crack (>= 0.3.2)
+      hashdiff (>= 0.4.0, < 2.0.0)
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
@@ -247,6 +271,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.4)
   byebug
   dotenv-rails
+  factory_bot_rails
   faraday
   hiredis
   listen (~> 3.3)
@@ -258,8 +283,11 @@ DEPENDENCIES
   redis
   rspec-rails (~> 6.0.0)
   rubocop-rails
+  rufus-scheduler
   spring
   tzinfo-data
+  vcr
+  webmock
 
 RUBY VERSION
    ruby 3.0.2p107
