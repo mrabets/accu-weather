@@ -2,7 +2,7 @@
 
 class Api::V1::WeatherController < ApplicationController
   def current
-    render json: AccuWeatherApi::Wrapper.current_conditions.as_json
+    render json: AccuWeatherApi::Wrapper.new.current_conditions.as_json
   end
 
   def by_time
