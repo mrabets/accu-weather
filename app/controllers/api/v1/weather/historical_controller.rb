@@ -37,7 +37,7 @@ module Api
         end
 
         def day_conditions
-          @day_conditions ||= AccuWeatherApi::Wrapper.new.day_conditions
+          @day_conditions ||= AccuWeatherApi::DayConditionsWrapper.call
         end
       end
     end
