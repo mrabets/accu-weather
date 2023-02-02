@@ -1,20 +1,30 @@
-## Run locally
+## I. Run locally
 
-### Create `.env` file and add
+#### 1. Create `.env` file and add
 ```
-ACCUWEATHER_API_KEY=<your_api_key>
+ACCUWEATHER_API_KEY=aPmXW3zSMgsz4K84mkY8fVRokC5xkAZY # Or <your_api_key>
 DB_HOST=localhost
 DB_USERNAME=dummy
 DB_PASSWORD=password
 ```
 * Check db username and password in your local machine
 
-#### Try Swagger. Go to:
+#### 4. Setup DB
+```
+rails db:setup
+```
+
+#### 5. Start the server
+```
+rails s
+```
+
+#### 3. Try Swagger. Go to:
 ```
 http://localhost:3000/api-docs
 ```
 
-## Or run with Docker
+## II. Or run with Docker
 
 #### 1. Build the image
 ```
@@ -33,7 +43,7 @@ docker compose up
 
 #### 3. Setup database
 ```
-docker compose run web rake db:create db:migrate
+docker compose run web rails db:setup
 ```
 
 #### 4. Change `swagger/v1/swagger.yaml:54` url to
