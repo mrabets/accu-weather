@@ -23,6 +23,9 @@ services:
       - redis
     environment:
       - REDIS_URL_CACHING=redis://redis:6379/0
+      - DB_HOST=db
+      - DB_USERNAME=postgres
+      - DB_PASSWORD=password
 
 volumes:
   redis:
