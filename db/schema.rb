@@ -15,34 +15,12 @@ ActiveRecord::Schema.define(version: 2023_01_31_153455) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "delayed_jobs", force: :cascade do |t|
-    t.integer "priority", default: 0, null: false
-    t.integer "attempts", default: 0, null: false
-    t.text "handler", null: false
-    t.text "last_error"
-    t.datetime "run_at"
-    t.datetime "locked_at"
-    t.datetime "failed_at"
-    t.string "locked_by"
-    t.string "queue"
-    t.datetime "created_at", precision: 6
-    t.datetime "updated_at", precision: 6
-    t.index ["priority", "run_at"], name: "delayed_jobs_priority"
-  end
-
   create_table "weather_conditions", force: :cascade do |t|
     t.float "temperature"
     t.integer "timestamp"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["timestamp"], name: "index_weather_conditions_on_timestamp", unique: true
-  end
-
-  create_table "weather_data", force: :cascade do |t|
-    t.float "temperature"
-    t.datetime "timestamp"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
   end
 
 end
