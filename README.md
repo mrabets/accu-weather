@@ -9,6 +9,11 @@ DB_PASSWORD=password
 ```
 * Check db username and password in your local machine
 
+#### Try Swagger. Go to:
+```
+http://localhost:3000/api-docs
+```
+
 ## Or run with Docker
 
 #### 1. Build the image
@@ -31,7 +36,17 @@ docker compose up
 docker compose run web rake db:create db:migrate
 ```
 
-#### 4. Send request
+#### 4. Change `swagger/v1/swagger.yaml:54` url to
+```
+servers:
+- url: http://0.0.0.0:3000
+```
+
+#### 5. Send request
 ```
 curl http://0.0.0.0:3000/api/v1/health
+```
+#### 6. Try Swagger. Go to:
+```
+http://0.0.0.0:3000/api-docs
 ```
