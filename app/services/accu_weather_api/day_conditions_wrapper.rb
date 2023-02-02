@@ -13,12 +13,14 @@ module AccuWeatherApi
     attr_reader :accu_weather_client
 
     def weather_conditions(attribute_list)
-      attribute_list.map(&method(:weather_condition))
+      Rails.cache.fetch('day_conditions', expires: 30.minutes) do
+        attribute_list.map(&method(:weather_condition))
+      end
     end
 
     def weather_condition(attributes)
-      WeatherCondition.where(timestamp: attributes['epoch_time'])
-                      .first_or_create { |condition| condition.temperature = fetch_metric_temperature(attributes) }
+        WeatherCondition.where(timestamp: attributes['epoch_time'])
+                        .first_or_create { |condition| condition.temperature = fetch_metric_temperature(attributes) }
     end
   end
 end
