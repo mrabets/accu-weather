@@ -2,13 +2,6 @@
 
 module AccuWeatherApi
   class Wrapper
-    include Singleton
-
-    class << self
-      delegate :current_conditions, to: :instance
-      delegate :day_conditions, to: :instance
-    end
-
     def initialize
       @accu_weather_client = Client.new
     end
@@ -34,10 +27,8 @@ module AccuWeatherApi
     end
 
     def weather_condition(attributes)
-      Rails.cache.fetch(attributes['epoch_time'], expires: 30.minutes) do
-        WeatherCondition.where(timestamp: attributes['epoch_time'])
-                        .first_or_create { |condition| condition.temperature = fetch_metric_temperature(attributes) }
-      end
+      WeatherCondition.where(timestamp: attributes['epoch_time'])
+                      .first_or_create { |condition| condition.temperature = fetch_metric_temperature(attributes) }
     end
 
     def presented_data(attributes)
