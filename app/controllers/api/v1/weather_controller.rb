@@ -6,7 +6,7 @@ class Api::V1::WeatherController < ApplicationController
   end
 
   def by_time
-    condition = Weather::ByTimeSelector.new(params[:timestamp]).call
+    condition = Weather::ByTimeSelector.call(params[:timestamp])
 
     if condition.present?
       render json: condition
