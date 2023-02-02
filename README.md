@@ -3,7 +3,11 @@
 ### Create `.env` file and add
 ```
 ACCUWEATHER_API_KEY=<your_api_key>
+DB_HOST=localhost
+DB_USERNAME=dummy
+DB_PASSWORD=password
 ```
+* Check db username and password in your local machine
 
 ## Or run with Docker
 
