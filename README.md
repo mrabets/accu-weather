@@ -1,4 +1,13 @@
-## I. Run locally
+# Accu Weather
+
+**Accu Weather** is a Rails API Only for working with [AccuWeather API](https://developer.accuweather.com/).
+
+It uses Postgres, Redis as a cache, and Swagger. This application is available to run in a Docker environment (see the instructions below).
+
+
+## Usage
+
+### I. Run locally
 
 #### 1. Create `.env` file and add
 ```
@@ -24,7 +33,7 @@ rails s
 http://localhost:3000/api-docs
 ```
 
-## II. Or run with Docker
+### II. Or run with Docker
 
 #### 1. Build the image
 ```
